@@ -21,7 +21,7 @@ body {
   color: rgba(0,0,0,.95);
   line-height: 1;
   font-family: Roboto,serif;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -209,11 +209,15 @@ a:hover {
 }
 .footer__grid {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  max-width: 1376px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 15px
 }
 .footer__column {
-  min-width: 160px
+  min-width: 160px;
+  flex: 0 0 calc(20% - 12px)
 }
 .footer__item-main {
   display: block;
@@ -644,7 +648,8 @@ a:hover {
   padding: 30px 0;
   border-top: 2px solid #ddd;
   display: flex;
-  align-items: center
+  align-items: center;
+  max-width: 1350px
 }
 .section__item:hover {
   background-color: #ddd
@@ -881,19 +886,16 @@ a:hover {
     width: 3rem
   }
   .footer__grid {
-    gap: 1.875rem
-  }
-  .footer__grid {
     margin-bottom: 10.625rem
   }
   .footer__item-main {
     font-size: 1.125rem
   }
   .footer__item {
-    font-size: .875rem
+    font-size: .9375rem
   }
   .footer__copyrights {
-    font-size: .875rem
+    font-size: .9375rem
   }
   .hero {
     margin-top: 4.25rem
@@ -1148,7 +1150,7 @@ a:hover {
     margin-bottom: 8.125rem
   }
   .section__name {
-    font-size: 4.5625rem
+    font-size: 3.4375rem
   }
   .section__main {
     gap: 3.75rem
@@ -1166,13 +1168,13 @@ a:hover {
     gap: 1.25rem
   }
   .section__item-title {
-    font-size: 2.5625rem
+    font-size: 1.875rem
   }
   .section__item-description {
-    font-size: 2.0625rem
+    font-size: 1.5rem
   }
   .section__item-date {
-    font-size: 1.5625rem
+    font-size: 1.125rem
   }
   .pagination {
     margin-top: 8.125rem
@@ -1226,10 +1228,10 @@ a:hover {
     margin-bottom: 3.75rem
   }
   .linkslist__title {
-    font-size: 1.875rem
+    font-size: 1.5625rem
   }
   .linkslist__item {
-    font-size: 1.5625rem
+    font-size: 1.25rem
   }
   .article-grid {
     margin-top: 3.75rem
@@ -1244,10 +1246,10 @@ a:hover {
     gap: 3.75rem
   }
   .article-grid__item-title {
-    font-size: 1.625rem
+    font-size: 1.3125rem
   }
   .article-grid__item-description {
-    font-size: 1.4375rem
+    font-size: 1.125rem
   }
 }
 @media (min-width:120em) {
@@ -1284,9 +1286,6 @@ a:hover {
   }
   .footer__form-submit {
     width: 2.25rem
-  }
-  .footer__grid {
-    gap: .625rem
   }
   .footer__grid {
     margin-bottom: 5.625rem
@@ -1826,19 +1825,16 @@ a:hover {
     width: clamp(2.25rem ,2.0931372549rem + .7843137255vw ,3rem)
   }
   .footer__grid {
-    gap: clamp(.625rem ,.3635620915rem + 1.3071895425vw ,1.875rem)
-  }
-  .footer__grid {
     margin-bottom: clamp(5.625rem ,4.579248366rem + 5.2287581699vw ,10.625rem)
   }
   .footer__item-main {
     font-size: clamp(.9375rem ,.8982843137rem + .1960784314vw ,1.125rem)
   }
   .footer__item {
-    font-size: clamp(.8125rem ,.7994281046rem + .0653594771vw ,.875rem)
+    font-size: clamp(.8125rem ,.7863562092rem + .1307189542vw ,.9375rem)
   }
   .footer__copyrights {
-    font-size: clamp(.75rem ,.7238562092rem + .1307189542vw ,.875rem)
+    font-size: clamp(.75rem ,.7107843137rem + .1960784314vw ,.9375rem)
   }
   .hero {
     margin-top: clamp(1.875rem ,1.3782679739rem + 2.4836601307vw ,4.25rem)
@@ -2093,7 +2089,7 @@ a:hover {
     margin-bottom: clamp(3.75rem ,2.8349673203rem + 4.5751633987vw ,8.125rem)
   }
   .section__name {
-    font-size: clamp(1.375rem ,.7083333333rem + 3.3333333333vw ,4.5625rem)
+    font-size: clamp(1.375rem ,.943627451rem + 2.1568627451vw ,3.4375rem)
   }
   .section__main {
     gap: clamp(.9375rem ,.3492647059rem + 2.9411764706vw ,3.75rem)
@@ -2111,13 +2107,13 @@ a:hover {
     gap: clamp(.9375rem ,.8721405229rem + .3267973856vw ,1.25rem)
   }
   .section__item-title {
-    font-size: clamp(1.125rem ,.8243464052rem + 1.5032679739vw ,2.5625rem)
+    font-size: clamp(1.125rem ,.9681372549rem + .7843137255vw ,1.875rem)
   }
   .section__item-description {
-    font-size: clamp(1rem ,.7777777778rem + 1.1111111111vw ,2.0625rem)
+    font-size: clamp(1rem ,.8954248366rem + .522875817vw ,1.5rem)
   }
   .section__item-date {
-    font-size: clamp(.875rem ,.7312091503rem + .7189542484vw ,1.5625rem)
+    font-size: clamp(.875rem ,.8227124183rem + .2614379085vw ,1.125rem)
   }
   .pagination {
     margin-top: clamp(3.75rem ,2.8349673203rem + 4.5751633987vw ,8.125rem)
@@ -2171,10 +2167,10 @@ a:hover {
     margin-bottom: clamp(1.875rem ,1.4828431373rem + 1.9607843137vw ,3.75rem)
   }
   .linkslist__title {
-    font-size: clamp(1.125rem ,.9681372549rem + .7843137255vw ,1.875rem)
+    font-size: clamp(1.125rem ,1.033496732rem + .4575163399vw ,1.5625rem)
   }
   .linkslist__item {
-    font-size: clamp(1rem ,.8823529412rem + .5882352941vw ,1.5625rem)
+    font-size: clamp(1rem ,.9477124183rem + .2614379085vw ,1.25rem)
   }
   .article-grid {
     margin-top: clamp(1.875rem ,1.4828431373rem + 1.9607843137vw ,3.75rem)
@@ -2189,10 +2185,10 @@ a:hover {
     gap: clamp(.9375rem ,.3492647059rem + 2.9411764706vw ,3.75rem)
   }
   .article-grid__item-title {
-    font-size: clamp(1.0625rem ,.9448529412rem + .5882352941vw ,1.625rem)
+    font-size: clamp(1.0625rem ,1.0102124183rem + .2614379085vw ,1.3125rem)
   }
   .article-grid__item-description {
-    font-size: clamp(1rem ,.908496732rem + .4575163399vw ,1.4375rem)
+    font-size: clamp(1rem ,.9738562092rem + .1307189542vw ,1.125rem)
   }
 }
 @media (min-width:90em)and (max-width:120em) {
