@@ -389,13 +389,12 @@ a:hover {
 }
 .smallList__wrapper {
   display: flex;
-  overflow-x: auto
+  gap: 30px
 }
 .smallList__item {
   display: flex;
   flex-direction: column;
-  flex: 0 0 auto;
-  width: 234px
+  flex: 0 1 14.28%
 }
 .smallList__image {
   margin-bottom: 8px
@@ -425,11 +424,10 @@ a:hover {
 .interesting__wrapper {
   display: flex;
   gap: 15px;
-  overflow-x: auto;
   padding-bottom: 15px
 }
 .interesting__item {
-  flex: 0 0 auto;
+  flex: 0 1 20%;
   position: relative;
   transition: all .4s ease-in-out
 }
@@ -549,11 +547,10 @@ a:hover {
 .incidents__wrapper {
   display: flex;
   gap: 12px;
-  overflow-x: auto;
   padding-bottom: 15px
 }
 .incidents__item {
-  flex: 0 0 auto
+  flex: 0 1 20%
 }
 .incidents__img {
   width: 100%;
@@ -858,9 +855,9 @@ a:hover {
   color: #222;
   line-height: 1.2
 }
-@media (min-width:61.99875em)and (min-width:115.625em) {
+@media (min-width:61.99875em) {
   .interesting__item:hover {
-    width: 28.125rem
+    flex: 1 1 25%
   }
 }
 @media (min-width:115.625em) {
@@ -975,12 +972,6 @@ a:hover {
   .smallList {
     margin-top: 3.75rem
   }
-  .smallList__wrapper {
-    gap: 1.875rem
-  }
-  .smallList__item {
-    width: 14.625rem
-  }
   .smallList__title {
     font-size: 1.375rem
   }
@@ -992,9 +983,6 @@ a:hover {
   }
   .interesting__heading {
     font-size: 3.375rem
-  }
-  .interesting__item {
-    width: 23.4375rem
   }
   .interesting__item {
     height: 35rem
@@ -1100,9 +1088,6 @@ a:hover {
   }
   .incidents__heading {
     padding-bottom: .875rem
-  }
-  .incidents__item {
-    width: 26.5625rem
   }
   .incidents__image {
     margin-bottom: 2.1875rem
@@ -1377,12 +1362,6 @@ a:hover {
   .smallList {
     margin-top: 1.875rem
   }
-  .smallList__wrapper {
-    gap: .9375rem
-  }
-  .smallList__item {
-    width: 12.5rem
-  }
   .smallList__title {
     font-size: .9375rem
   }
@@ -1394,9 +1373,6 @@ a:hover {
   }
   .interesting__heading {
     font-size: 2.125rem
-  }
-  .interesting__item {
-    width: 18.75rem
   }
   .interesting__item {
     height: 28rem
@@ -1502,9 +1478,6 @@ a:hover {
   }
   .incidents__heading {
     padding-bottom: .375rem
-  }
-  .incidents__item {
-    width: 20rem
   }
   .incidents__image {
     margin-bottom: 1.25rem
@@ -1654,11 +1627,6 @@ a:hover {
     font-size: 1rem
   }
 }
-@media (max-width:115.625em) {
-  .incidents .__container {
-    padding-right: 0
-  }
-}
 @media (max-width:89.99875em) {
   .article__left {
     display: none
@@ -1762,12 +1730,36 @@ a:hover {
     width: 100%;
     overflow-y: inherit
   }
+  .smallList__wrapper {
+    gap: 15px;
+    flex-wrap: wrap
+  }
+  .smallList__item {
+    flex: 0 1 calc(33.3% - 10px)
+  }
   .interesting__wrapper {
-    padding-left: 15px;
-    padding-right: 15px
+    flex-wrap: wrap
+  }
+  .interesting__item {
+    flex: 0 1 calc(50% - 7.5px)
+  }
+  .interesting__item:hover {
+    flex: 0 1 calc(50% - 7.5px)
+  }
+  .interesting__item:last-child {
+    flex: 0 0 100%
   }
   .society__wrapper {
     grid-template-columns: repeat(1,1fr)
+  }
+  .incidents__wrapper {
+    flex-wrap: wrap
+  }
+  .incidents__item {
+    flex: 0 1 calc(50% - 7.5px)
+  }
+  .incidents__item:last-child {
+    flex: 0 1 100%
   }
   .categories__wrapper {
     grid-template-columns: repeat(1,1fr)
@@ -1788,6 +1780,12 @@ a:hover {
   }
 }
 @media (max-width:47.99875em) {
+  .smallList__item {
+    flex: 0 1 calc(50% - 10px)
+  }
+  .smallList__item:last-child {
+    flex: 0 1 100%
+  }
   .section__item {
     flex-direction: column
   }
@@ -1914,12 +1912,6 @@ a:hover {
   .smallList {
     margin-top: clamp(1.875rem ,1.4828431373rem + 1.9607843137vw ,3.75rem)
   }
-  .smallList__wrapper {
-    gap: clamp(.9375rem ,.7414215686rem + .9803921569vw ,1.875rem)
-  }
-  .smallList__item {
-    width: clamp(12.5rem ,12.0555555556rem + 2.2222222222vw ,14.625rem)
-  }
   .smallList__title {
     font-size: clamp(.9375rem ,.845996732rem + .4575163399vw ,1.375rem)
   }
@@ -1931,9 +1923,6 @@ a:hover {
   }
   .interesting__heading {
     font-size: clamp(2.125rem ,1.8635620915rem + 1.3071895425vw ,3.375rem)
-  }
-  .interesting__item {
-    width: clamp(18.75rem ,17.7696078431rem + 4.9019607843vw ,23.4375rem)
   }
   .interesting__item {
     height: clamp(28rem ,26.5359477124rem + 7.3202614379vw ,35rem)
@@ -2039,9 +2028,6 @@ a:hover {
   }
   .incidents__heading {
     padding-bottom: clamp(.375rem ,.2704248366rem + .522875817vw ,.875rem)
-  }
-  .incidents__item {
-    width: clamp(20rem ,18.6274509804rem + 6.862745098vw ,26.5625rem)
   }
   .incidents__image {
     margin-bottom: clamp(1.25rem ,1.0539215686rem + .9803921569vw ,2.1875rem)
@@ -2194,16 +2180,6 @@ a:hover {
 @media (min-width:90em)and (max-width:120em) {
   .header__wrapper {
     gap: clamp(1.875rem ,-13.125rem + 16.6666666667vw ,6.875rem)
-  }
-}
-@media (min-width:61.99875em)and (min-width:20em)and (max-width:115.625em) {
-  .interesting__item:hover {
-    width: clamp(23.4375rem ,22.4571078431rem + 4.9019607843vw ,28.125rem)
-  }
-}
-@media (min-width:61.99875em)and (max-width:20em) {
-  .interesting__item:hover {
-    width: 23.4375rem
   }
 }
 @media (min-width:61.99875em)and (max-width:120em) {
